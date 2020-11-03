@@ -35,8 +35,8 @@ class App extends Component {
   render() {
     return (
     <main className="appContentWrapper">
-        <ComponentOne className="example example1" exampleProp={this.state.key}/>
-        <ComponentTwo className="example example2" exampleProp={this.state.key2}/>
+      <ComponentOne className="example example1" exampleProp={this.state.key}/>
+      <ComponentTwo className="example example2" exampleProp={this.state.key2}/>
     </main>
     )}
   }
@@ -46,13 +46,19 @@ class App extends Component {
 
 // Option 2: functional-component version 
 
-// function App(props) {
-//   return (
-//     <main className="appContentWrapper">
-//         <ComponentOne />
-//         <ComponentTwo />
-//     </main>
-//   )
-// }
+function App() {
+  return (
+<div className="App">
+      <Header />
+      <main>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/pageone" component={PageOne} />
+          <Route path="/pagetwo" component={PageTwo} />
+        </Switch>
+      </main>
+    </div>
+  )
+}
 
-// export default App;
+export default App
