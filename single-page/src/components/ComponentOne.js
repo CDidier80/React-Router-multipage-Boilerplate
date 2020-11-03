@@ -1,4 +1,7 @@
 // rename file as needed
+
+// non-page components are used as subcomponents pages to fill them with content
+
 import React, { Component } from 'react'
 
 
